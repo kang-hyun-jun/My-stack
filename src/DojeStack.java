@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class DojeStack<T> {
     private int top; // 스택의 최상단 인덱스
@@ -61,5 +62,16 @@ public class DojeStack<T> {
         resize();
         return value;
     }
-
+    public T pop()
+    {
+        //배열에 요소가 없는데 제거하려고 하는경우 예외처리
+        if(isEmpty())
+        {
+            throw new EmptyStackException();
+        }
+        T value = stack[top];
+        stack[top--] = null;
+        resize();
+        return value;
+    }
 }
