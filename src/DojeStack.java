@@ -53,5 +53,13 @@ public class DojeStack<T> {
             return;
         }
     }
+    public T push(T value)
+    {
+        //top값이 초기에 -1이기에 선위연산을 이용해서 먼저 증가하게 한 이후에 value값을 넣어준다.
+        stack[++top] = value;
+        //이후 배열의 크기를 resize시켜준다.
+        resize();
+        return value;
+    }
 
 }
