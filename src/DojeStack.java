@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DojeStack<T> {
     private int top; // 스택의 최상단 인덱스
     private T[] stack; // 스택 데이터를 저장할 배열
@@ -30,6 +32,25 @@ public class DojeStack<T> {
         else
         {
             return false;
+        }
+    }
+
+    private void resize()
+    {
+        //외부에서 resize메서드를 따로 호출하는 일은 없기때문에 private으로 선언한다.
+        int now_capacity = stack.length-1;
+        if(now_capacity == top)
+        {
+            int new_capacity = stack.length * 2;
+            stack = Arrays.copyOf(stack, new_capacity);
+            return;
+        }
+        else if (now_capacity/2 > top)
+        {
+            int new_capacity = stack.length / 2;
+            //절반을 취한것 vs 최소 크기 중에 더 큰 값을 취한다.
+            stack = Arrays.copyOf(stack, Math.max(new_capacity,DEFALT_CAPACITY));
+            return;
         }
     }
 
