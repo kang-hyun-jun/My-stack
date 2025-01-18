@@ -74,4 +74,13 @@ public class DojeStack<T> {
         resize();
         return value;
     }
+    public T peek()
+    {
+        //배열에 요소가 없는데 값을 얻으려고 하는경우 예외처리
+        if(isEmpty())
+        {
+            throw new EmptyStackException();
+        }
+        return stack[top];
+    }
 }

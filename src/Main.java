@@ -17,6 +17,7 @@ public class Main {
         // 스택 상태 출력
         System.out.println("Stack: " + stack); // [Apple, Banana]
         // 특정 요소 검색 (search)
+
         //System.out.println("Position of 'Apple': " + stack.search("Apple")); // 2
     }
 }
