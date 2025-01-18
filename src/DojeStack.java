@@ -9,4 +9,28 @@ public class DojeStack<T> {
         this.stack = (T[]) new Object[DEFALT_CAPACITY]; // 제네릭 배열 생성
         this.top = -1; // 초기화
     }
+
+    public boolean isEmpty() {
+        //배열이 비어있는경우에 true를 반환해줌
+        if(this.top == -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public boolean isFull() {
+        //배열이 꽉 차있는경우 true를 반환해줌
+        if(this.top == stack.length -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }
