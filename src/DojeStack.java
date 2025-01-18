@@ -104,4 +104,8 @@ public class DojeStack<T> {
         }
         return -1;
     }
+    @Override
+    public String toString() {
+        return Arrays.toString(stack);
+    }
 }
