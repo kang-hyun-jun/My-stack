@@ -9,7 +9,7 @@ public class Main {
         stack.push("Banana");
         stack.push("Cherry");
         // 최상단 데이터 조회 (peek)
-        System.out.println("Top element: " + stack.pop()); // Cherry
+        System.out.println("Top element: " + stack.peek()); // Cherry
 
         // 데이터 추출 (pop)
         System.out.println("Popped element: " + stack.pop()); // Cherry
@@ -18,6 +18,6 @@ public class Main {
         System.out.println("Stack: " + stack); // [Apple, Banana]
         // 특정 요소 검색 (search)
 
-        //System.out.println("Position of 'Apple': " + stack.search("Apple")); // 2
+        System.out.println("Position of 'Apple': " + stack.search("Apple")); // 2
     }
 }

@@ -83,4 +83,25 @@ public class DojeStack<T> {
         }
         return stack[top];
     }
+    public int search(T value)
+    {
+        //배열에 요소가 없는데 값을 얻으려고 하는경우 예외처리
+        if(isEmpty())
+        {
+            throw new EmptyStackException();
+        }
+        int num=1;
+        for(int i=top;i>=0;i--)
+        {
+            if(stack[i].equals(value))
+            {
+                return num;
+            }
+            else
+            {
+                num++;
+            }
+        }
+        return -1;
+    }
 }
